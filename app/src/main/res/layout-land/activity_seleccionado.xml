@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acciones.Seleccionado">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8093b7"
+        android:id="@+id/barra_tarea2"
+        app:titleTextColor="#FFFFFF"
+        android:titleTextColor="#FFFFFF"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:text="@string/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barra_tarea2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:id="@+id/tvs_nombre_escogido"
+        android:textColor="#374594"/>
+
+
+    <TextView
+        android:text="@string/et_hint_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_nombre"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvs_nombre_escogido"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/tv_curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_curso"
+        android:textColor="#374594"
+        android:layout_below="@+id/tvs_nombre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/et_hint_curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_curso_escogido"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvs_curso"
+        android:layout_alignLeft="@+id/tvs_nombre"
+        android:layout_alignStart="@+id/tvs_nombre" />
+
+    <TextView
+        android:text="@string/tv_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_fecha"
+        android:textColor="#374594"
+        android:layout_below="@+id/tvs_curso_escogido"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/et_hint_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_fecha_escogido"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvs_fecha"
+        android:layout_alignLeft="@+id/tvs_nombre"
+        android:layout_alignStart="@+id/tvs_nombre" />
+
+    <TextView
+        android:text="@string/tv_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_hora"
+        android:textColor="#374594"
+        android:layout_below="@+id/tvs_fecha_escogido"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/et_hint_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_hora_escogido"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvs_hora"
+        android:layout_alignLeft="@+id/tvs_nombre"
+        android:layout_alignStart="@+id/tvs_nombre" />
+
+    <TextView
+        android:text="@string/tv_direccion_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_direccion"
+        android:textColor="#374594"
+        android:layout_above="@+id/tvs_nombre"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/et_direccion_escogido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tvs_direccion_escogido"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvs_direccion"
+        android:layout_alignLeft="@+id/tvs_direccion"
+        android:layout_alignStart="@+id/tvs_direccion"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+
+    <Button
+        android:text="@string/bt_modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_modificar"
+        android:drawableLeft="@android:drawable/ic_input_get"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tvs_nombre"
+        android:layout_toEndOf="@+id/tvs_nombre"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+    <Button
+        android:text="@string/bt_eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_eliminar"
+        android:drawableLeft="@android:drawable/ic_delete"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/bt_modificar"
+        android:layout_toEndOf="@+id/bt_modificar" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        app:srcCompat="@android:drawable/btn_dialog"
+        android:layout_marginLeft="14dp"
+        android:id="@+id/ivs_foto_alumno"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@+id/tvs_curso_escogido"
+        android:layout_toRightOf="@+id/bt_eliminar"
+        android:layout_toEndOf="@+id/bt_eliminar" />
+
+
+</RelativeLayout>

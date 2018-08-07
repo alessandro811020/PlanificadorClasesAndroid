@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_formulario"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.masterd.android.app.clases.Formulario">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#8093b7"
+        android:id="@+id/barra_tarea1"
+        app:titleTextColor="#FFFFFF"
+        android:titleTextColor="#FFFFFF"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <TextView
+        android:text="@string/tv_nombre_alumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barra_tarea1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/tv_Titulo_Formulario" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_marginTop="3dp"
+        android:layout_height="30dp"
+        android:id="@+id/tv_nombre_alumno"
+        android:layout_below="@id/tv_Titulo_Formulario"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_nombre"/>
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:background="@drawable/fondo_edittext_formulario"
+        android:gravity="center"
+        android:hint="@string/et_hint_nombre"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:id="@+id/et_nombre_ingresar"
+        android:layout_alignTop="@+id/tv_nombre_alumno"
+        android:layout_toRightOf="@+id/tv_nombre_alumno"
+        android:layout_toEndOf="@+id/tv_nombre_alumno" />
+
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:background="@drawable/fondo_edittext_formulario"
+        android:gravity="center"
+        android:hint="@string/et_hint_curso"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:layout_below="@id/et_nombre_ingresar"
+        android:layout_marginTop="3dp"
+        android:layout_alignLeft="@id/et_nombre_ingresar"
+        android:id="@+id/et_curso" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:inputType="date"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/fondo_edittext_formulario"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_alignLeft="@id/et_curso"
+        android:layout_below="@id/et_curso"
+        android:ems="10"
+        android:id="@+id/et_fecha_clase"
+        android:hint="@string/et_hint_fecha" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:textColor="#000000"
+        android:inputType="time"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/fondo_edittext_formulario"
+        android:layout_alignLeft="@id/et_fecha_clase"
+        android:layout_below="@id/et_fecha_clase"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:ems="10"
+        android:id="@+id/et_hora_clase"
+        android:hint="@string/et_hint_hora" />
+
+    <Button
+        android:text="@string/bt_marcar_mapa"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignLeft="@id/et_hora_clase"
+        android:layout_below="@id/et_hora_clase"
+        android:background="@drawable/fondo_edittext_formulario"
+        android:elevation="3dp"
+        android:textSize="12sp"
+        android:id="@+id/bt_ir_mapas" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:layout_alignLeft="@id/bt_ir_mapas"
+        android:layout_below="@id/bt_ir_mapas"
+        android:textColor="#000000"
+        android:ems="10"
+        android:id="@+id/et_direccion_final"
+        android:hint="@string/et_direccion_final" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:layout_alignLeft="@id/et_direccion_final"
+        android:layout_below="@id/et_direccion_final"
+        android:textColor="#000000"
+        android:ems="10"
+        android:id="@+id/et_latitud"
+        android:hint="@string/et_direccion_final" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:inputType="time"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:layout_alignLeft="@id/et_latitud"
+        android:layout_below="@id/et_latitud"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:ems="10"
+        android:id="@+id/et_longitud"
+        android:hint="@string/et_direccion_final"
+        android:layout_height="30dp" />
+
+    <Button
+        android:text="@string/bt_agregar_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:textSize="12sp"
+        android:id="@+id/bt_hacer_foto"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tvF_agregar_foto"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:layout_alignBottom="@+id/tv_direccion_foto" />
+
+    <TextView
+        android:text="@string/tv_direccion_almacenamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_direccion_foto"
+        android:layout_below="@+id/tvF_agregar_foto"
+        android:layout_alignLeft="@+id/tvF_agregar_foto"
+        android:layout_alignStart="@+id/tvF_agregar_foto" />
+
+    <Button
+        android:text="@string/bt_registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_registrar"
+        android:layout_below="@+id/bt_hacer_foto"
+        android:layout_centerHorizontal="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_curso"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_curso"
+        android:layout_alignBaseline="@+id/et_curso"
+        android:layout_alignBottom="@+id/et_curso"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Fecha"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_fecha"
+        android:layout_alignBaseline="@+id/et_fecha_clase"
+        android:layout_alignBottom="@+id/et_fecha_clase"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Hora"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_hora"
+        android:layout_alignBaseline="@+id/et_hora_clase"
+        android:layout_alignBottom="@+id/et_hora_clase"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Direccion"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_Direccion"
+        android:layout_alignBaseline="@+id/bt_ir_mapas"
+        android:layout_alignBottom="@+id/bt_ir_mapas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Direccion_literal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_direccion_final"
+        android:layout_alignBaseline="@+id/et_direccion_final"
+        android:layout_alignBottom="@+id/et_direccion_final"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Latitud"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_latitud"
+        android:layout_alignBaseline="@+id/et_latitud"
+        android:layout_alignBottom="@+id/et_latitud"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Longitud"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="@string/tv_longitud"
+        android:layout_alignBaseline="@+id/et_longitud"
+        android:layout_alignBottom="@+id/et_longitud"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/tvF_agregar_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvF_agregar_foto"
+        android:layout_below="@+id/tv_Longitud"
+        android:layout_marginTop="30dp" />
+
+
+</RelativeLayout>
